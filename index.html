@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>VIMTIPS - Premium Landing</title>
+    <style>
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0; padding: 0;
+            display: flex; flex-direction: column; align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* Top Header Area */
+        .top-nav {
+            width: 100%; display: flex; justify-content: space-between; align-items: center;
+            padding: 12px 20px; background: #000; border-bottom: 1px solid #222;
+        }
+        .top-nav .brand { font-size: 22px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; }
+        .top-nav .icon { font-size: 20px; cursor: pointer; }
+
+        /* Update Ticker */
+        .update-bar {
+            width: 100%; background: #000; display: flex; align-items: center;
+            height: 40px; border-bottom: 2px solid red; overflow: hidden; position: relative;
+        }
+        .update-tag {
+            background: red; color: white; padding: 0 12px; font-weight: bold;
+            font-size: 12px; height: 100%; display: flex; align-items: center; z-index: 10;
+        }
+        .marquee-container { flex: 1; overflow: hidden; white-space: nowrap; }
+        .marquee-text {
+            display: inline-block; font-size: 15px; padding-left: 100%;
+            animation: marquee 15s linear infinite;
+        }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+
+        /* Content Wrapper */
+        .container { width: 100%; max-width: 400px; padding: 15px; text-align: center; }
+
+        .main-title { font-size: 17px; line-height: 1.6; font-weight: 700; margin: 20px 0; }
+
+        /* Buttons Base Styling */
+        .btn {
+            display: flex; align-items: center; justify-content: center;
+            width: 100%; padding: 18px; margin: 15px 0; border-radius: 50px;
+            text-decoration: none; font-weight: 800; font-size: 19px;
+            position: relative; overflow: hidden; transition: 0.3s;
+        }
+        .btn-icon {
+            width: 35px; height: 35px; background: rgba(0,0,0,0.8);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            position: absolute; left: 10px; color: #fff; font-size: 18px;
+        }
+
+        /* Reg Button - Yellow Shimmer */
+        .btn-yellow {
+            background: linear-gradient(90deg, #FFB800, #FF8A00);
+            color: #000; box-shadow: 0 0 20px rgba(255, 184, 0, 0.4);
+        }
+        .btn-yellow::after {
+            content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        /* Telegram Button - Red-Green Gradient Glow */
+        .btn-tg {
+            background: linear-gradient(to right, #FF2E5B, #00D1FF, #00FF85);
+            color: #fff; box-shadow: 0 0 20px rgba(0, 255, 133, 0.4);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer { 0% { left: -100%; } 100% { left: 100%; } }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+
+        /* Instruction Text */
+        .cyan-text { color: #00D1FF; font-weight: bold; margin: 20px 0; font-size: 15px; }
+
+        /* Video Box */
+        .video-box {
+            width: 100%; aspect-ratio: 16/9; background: #111;
+            border-radius: 15px; overflow: hidden; border: 2px solid #333; margin-bottom: 25px;
+        }
+        iframe { width: 100%; height: 100%; border: 0; }
+
+        /* Info Box */
+        .info-box {
+            background: #121212; border-radius: 15px; padding: 20px;
+            text-align: left; border: 1px solid #222; margin-bottom: 20px;
+        }
+        .info-title { color: #FF2E5B; font-weight: bold; font-size: 18px; margin-bottom: 15px; text-align: center; }
+        .list-item { display: flex; align-items: flex-start; margin-bottom: 12px; font-size: 14px; line-height: 1.4; }
+        .check { color: #00FF85; margin-right: 10px; font-weight: bold; }
+
+        /* Footer Buttons */
+        .footer-btns { display: flex; gap: 10px; justify-content: center; margin-top: 10px; }
+        .btn-outline {
+            flex: 1; padding: 12px; border: 2px solid #00D1FF; border-radius: 12px;
+            color: #00D1FF; text-decoration: none; font-weight: bold; font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="top-nav">
+        <div class="icon">☰</div>
+        <div class="brand">VIMTIPS</div>
+        <div class="icon">🔔</div>
+    </div>
+
+    <!-- Ticker -->
+    <div class="update-bar">
+        <div class="update-tag">UPDATE</div>
+        <div class="marquee-container">
+            <div class="marquee-text">সবার আগে আমাদের টেলিগ্রাম চ্যানেলে জয়েন করুন, তারপর কাজটি শুরু করুন। সম্পূর্ণ ফ্রিতে ইনকাম শিখতে ভিডিওটি দেখুন।</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Title -->
+        <div class="main-title">
+            💯 প্রতিদিন ৩০০ থেকে ৫০০ টাকা ইনকাম করুন সহজেই, নিচের সম্পূর্ণ ভিডিওটি দেখুন তাহলেই বুঝতে পারবেন কিভাবে ইনকাম করতে হবে 🤑
+        </div>
+
+        <!-- Registration Button -->
+        <a href="https://www.bdgamesapp.com?code=RY697H8TKHV&t=1776501245" target="_blank" class="btn btn-yellow">
+            <span class="btn-icon">🔗</span>
+            রেজিস্ট্রেশন করুন
+        </a>
+
+        <!-- Telegram Button -->
+        <a href="https://t.me/+cyRZcEyPp5tkZjFl" target="_blank" class="btn btn-tg">
+            <span class="btn-icon">✈</span>
+            Join Telegram Now
+        </a>
+
+        <div class="cyan-text">কাজটা শিখতে চান নিচের ভিডিওটি দেখুন আর ইনকাম শুরু করুন তাও আবার সম্পূর্ণ ফ্রিতে।</div>
+
+        <!-- Video Player -->
+        <div class="video-box">
+            <iframe src="https://player.vimeo.com/video/1186617790" allowfullscreen></iframe>
+        </div>
+
+        <!-- Why Work With Us Section -->
+        <div class="info-box">
+            <div class="info-title">🔥 কেন আমাদের সাথে কাজ করবেন?</div>
+            <div class="list-item"><span class="check">✔</span> মোবাইল দিয়ে প্রতিদিন ৩০০-৫০০ টাকা ইনকাম করার গ্যারান্টি।</div>
+            <div class="list-item"><span class="check">✔</span> ৫০০০+ একটিভ মেম্বার আমাদের সাথে নিয়মিত কাজ করছে।</div>
+            <div class="list-item"><span class="check">✔</span> সম্পূর্ণ ফ্রিতে কাজ শেখার জন্য আমাদের চ্যানেল সেরা।</div>
+            <div class="list-item"><span class="check">✔</span> নিয়মিত পেমেন্ট প্রুফ এবং আপডেট পাবেন চ্যানেলে।</div>
+        </div>
+
+        <!-- Bottom Buttons -->
+        <div class="footer-btns">
+            <a href="https://t.me/+cyRZcEyPp5tkZjFl" class="btn-outline">Join Telegram</a>
+            <a href="#" class="btn-outline">Free TV Channel</a>
+        </div>
+    </div>
+
+</body>
+</html>
